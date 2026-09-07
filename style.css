@@ -210,28 +210,84 @@ section img{
 
 .quienes{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 42% 1fr;
 
-    gap: 40px;
-    padding: 50px;
+    gap: 50px;
+    padding: 60px 50px;
     width: 100%;
     min-height: 0;
     margin: 0 auto;  
     box-sizing: border-box;  
     height: auto;
+    align-items: start;
 }
 
 .texto{
     width: 100%;
+    max-width: 68ch;
+    color: #1a1a1a;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: rgba(255, 255, 255, 0.55);
+    padding: 35px 40px;
+    border-radius: 15px;
 }
 
 .texto h4{
-    margin-bottom: 20px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    color: #6b4b00;
+    border-bottom: 3px solid rgb(208,187,52);
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.texto h4:first-child{
+    margin-top: 0;
+}
+
+.texto h5{
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    color: #6b4b00;
 }
 
 .texto p{
-    line-height: 1.6;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.texto ul{
+    margin: 0 0 20px 0;
+    padding-left: 22px;
+    line-height: 1.7;
+}
+
+.texto ul li{
+    margin-bottom: 6px;
+}
+
+.lista-servicios li::marker,
+.lista-categorias li::marker{
+    color: rgb(208,187,52);
+    font-weight: bold;
+}
+
+.linea-tiempo{
+    list-style: none;
+    padding-left: 0;
+    border-left: 3px solid rgb(208,187,52);
+}
+
+.linea-tiempo li{
+    padding: 4px 0 4px 18px;
+    margin-bottom: 10px;
+}
+
+.linea-tiempo strong{
+    color: #6b4b00;
 }
 
 .img-quienes{
@@ -262,9 +318,21 @@ section img{
     border-radius: 15px;
 }
 
+@media (max-width: 900px) {
+    .quienes {
+        grid-template-columns: 1fr;
+    }
+    .galeria-automovilismo {
+        position: static;
+        top: auto;
+    }
+    .texto {
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
     .quienes {
-        grid-template-columns: 1fr 1fr;
         padding: 30px 20px;
         gap: 25px;
     }
@@ -272,7 +340,8 @@ section img{
         order: 2;
     }
     .texto {
-        order: 1;
+        order: 2;
+        padding: 25px 22px;
     }
     .img-quienes img {
         max-height: 350px;
@@ -285,10 +354,13 @@ section img{
         max-height: 350px;
     }
     .galeria-automovilismo {
-        order: 2;
-    }
-    .texto {
         order: 1;
+    }
+    .texto h4{
+        font-size: 1.35rem;
+    }
+    .texto p, .texto ul{
+        font-size: 0.98rem;
     }
 }
 
@@ -389,7 +461,7 @@ footer {
 /*hero de video en Quienes somos*/
 
 .hero-banner {
-    position: relative;
+    position:relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -456,8 +528,9 @@ footer {
 
 .galeria-automovilismo {
     width: 100%;
-    display: flex;
-    align-items: center;
+    position: sticky;
+    top: 95px;
+    align-self: start;
 }
 
 .carousel {
@@ -485,4 +558,1598 @@ footer {
     .carousel-item img {
         height: 320px;
     }
+}
+/* =========================================
+   CORRECCIONES GENERALES
+========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Evita que las imágenes generen scroll horizontal */
+img,
+video {
+    max-width: 100%;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    min-height: 80px;
+}
+
+
+/* =========================================
+   BANNER PRINCIPAL - INDEX
+========================================= */
+
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Video del index */
+.hero-banner video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   BOTONES DE SERVICIOS
+========================================= */
+
+.servicios {
+    position: absolute;
+    top: 40%;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 0 15px;
+
+    z-index: 999;
+}
+
+.servicios a {
+    text-align: center;
+}
+
+
+/* =========================================
+   PÁGINA ¿QUIÉNES SOMOS?
+========================================= */
+
+.quienes {
+    display: grid;
+    grid-template-columns: 42% 1fr;
+
+    gap: 50px;
+
+    padding: 60px 50px;
+
+    width: 100%;
+    height: auto;
+    min-height: 0;
+
+    align-items: start;
+}
+
+
+/* TEXTO */
+
+.texto {
+    width: 100%;
+    max-width: 100%;
+
+    color: #1a1a1a;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    padding: 35px 40px;
+
+    border-radius: 15px;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.texto p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+
+    margin-bottom: 16px;
+}
+
+
+/* =========================================
+   IMAGEN PRINCIPAL DE QUIÉNES SOMOS
+========================================= */
+
+.img-quienes {
+    width: 100%;
+}
+
+/* IMPORTANTE:
+   Se elimina el margin-bottom: 90%
+   y se evita el zoom/corte de la imagen
+*/
+
+.img-quienes img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-height: none;
+
+    object-fit: contain;
+
+    margin-bottom: 0;
+
+    border-radius: 15px;
+}
+
+
+/* Si usás la otra clase de imágenes */
+
+.img-quienesa {
+    width: 100%;
+}
+
+.img-quienesa img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 15px;
+}
+
+
+/* =========================================
+   CARRUSEL
+========================================= */
+
+.galeria-automovilismo {
+    width: 100%;
+
+    position: sticky;
+    top: 95px;
+
+    align-self: start;
+}
+
+.carousel {
+    width: 100%;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Se mantiene un tamaño uniforme sin cortar
+   partes importantes de las fotos */
+
+.carousel-item {
+    background: #000;
+}
+
+.carousel-item img {
+    display: block;
+
+    width: 100%;
+    height: 500px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .quienes {
+        grid-template-columns: 1fr;
+
+        padding: 40px 25px;
+
+        gap: 30px;
+    }
+
+    .galeria-automovilismo {
+        position: static;
+    }
+
+    .texto {
+        max-width: 100%;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* ---------- HEADER ---------- */
+
+    header {
+        height: auto;
+        min-height: 100px;
+
+        flex-direction: column;
+
+        gap: 2px;
+
+        padding: 3px 5px;
+    }
+
+    .logo img {
+        display: block;
+
+        width: auto;
+        max-width: 90%;
+
+        height: 40px;
+
+        margin: 0 auto;
+    }
+
+    nav {
+        height: auto;
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 6px 12px;
+
+        padding: 0 5px;
+
+        margin: 0;
+    }
+
+    .nav--item a {
+        font-size: 13px;
+    }
+
+
+    /* =====================================
+       HERO DEL INDEX
+       Ocupa exactamente el primer pantallazo
+    ===================================== */
+
+    .hero-banner {
+        height: 100svh;
+        min-height: 100svh;
+    }
+
+    .hero-banner video {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
+    /* =====================================
+       BOTONES SOBRE EL BANNER
+    ===================================== */
+
+    .servicios {
+        position: absolute;
+
+        top: auto;
+        bottom: 20px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 0 10px;
+
+        gap: 7px;
+
+        justify-content: center;
+    }
+
+    .servicios a {
+        padding: 8px 11px;
+
+        font-size: 12px;
+
+        border-radius: 20px;
+    }
+
+
+    /* =====================================
+       QUIÉNES SOMOS
+    ===================================== */
+
+    .quienes {
+        display: flex;
+
+        flex-direction: column;
+
+        padding: 25px 15px;
+
+        gap: 25px;
+    }
+
+
+    /* Primero carrusel */
+
+    .galeria-automovilismo {
+        order: 1;
+
+        width: 100%;
+
+        position: static;
+    }
+
+
+    /* Después texto */
+
+    .texto {
+        order: 2;
+
+        width: 100%;
+
+        padding: 22px 18px;
+
+        border-radius: 12px;
+    }
+
+    .texto h4 {
+        font-size: 1.3rem;
+
+        line-height: 1.3;
+    }
+
+    .texto h5 {
+        font-size: 1.1rem;
+
+        line-height: 1.3;
+    }
+
+    .texto p,
+    .texto ul {
+        font-size: 0.98rem;
+
+        line-height: 1.7;
+    }
+
+
+    /* =====================================
+       IMÁGENES QUIÉNES SOMOS
+       SIN ZOOM
+    ===================================== */
+
+    .img-quienes,
+    .img-quienesa {
+        width: 100%;
+
+        order: 1;
+    }
+
+    .img-quienes img,
+    .img-quienesa img {
+        width: 100%;
+
+        height: auto;
+
+        max-height: none;
+
+        object-fit: contain;
+
+        margin: 0;
+
+        border-radius: 12px;
+    }
+
+
+    /* =====================================
+       CARRUSEL RESPONSIVE
+    ===================================== */
+
+    .carousel {
+        border-radius: 12px;
+    }
+
+    .carousel-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: #000;
+    }
+
+    .carousel-item img {
+        width: 100%;
+
+        height: auto;
+
+        max-height: 70vh;
+
+        object-fit: contain;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 12%;
+    }
+
+
+    /* =====================================
+       SLOGAN
+    ===================================== */
+
+    .slogan {
+        font-size: 1rem;
+
+        line-height: 1.5;
+
+        padding: 15px 12px;
+    }
+
+
+    /* =====================================
+       FOOTER
+    ===================================== */
+
+    .donde {
+        margin-top: 25px;
+
+        font-size: 2rem;
+
+        padding: 0 15px;
+    }
+
+    .ubi {
+        margin-top: 25px;
+
+        padding: 0 15px;
+
+        font-size: 20px;
+
+        text-align: center;
+    }
+
+    .mapa {
+        margin: 20px 0;
+    }
+
+    .mapa iframe {
+        width: 90%;
+
+        height: 300px;
+    }
+
+
+    /* BOTÓN WHATSAPP */
+
+    .btnwsp {
+        width: 50px;
+        height: 50px;
+
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .wsp {
+        width: 50px;
+        height: 50px;
+
+        margin: 0;
+    }
+
+}* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    font-family:'Chakra Petch', sans-serif;
+    background-color: #b17300;
+    flex-direction: column;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 5px;
+
+    display: flex;
+    align-items: center;
+
+    background: rgba(226, 226, 226, 0.281);
+    backdrop-filter: blur(5px);
+
+    z-index: 1000;
+}
+
+
+.logo img {
+    height: 70px;
+    width: 110px;
+    margin-top: 5px;
+    margin-right: 70px;
+
+}
+nav{
+    height: 45px;
+    align-items: center;
+}
+nav a{
+        text-decoration: none;
+        color: #000000;
+}
+    
+
+nav ul{
+
+    padding: 1px;
+    display: flex;
+    gap: 180px;
+    list-style: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+    border-radius: 10px;
+    padding-bottom: 0%;
+}
+.barra{
+    list-style: none;
+    display: flex;
+    gap: 1px;
+}
+
+.nav--item a:hover{
+    color: rgb(255, 221, 0);
+}
+@media (max-width: 900px){
+header{
+    padding: 5px 5px;
+}
+.logo img{
+    width: 110px;
+    height: 70px;
+    margin-top: 5px;
+    margin-right: 70px;
+
+}
+nav ul{
+    gap: 10px;
+}
+.nav--item a{
+    font-size: 16px;
+}
+}
+
+/*celulares*/
+@media (max-width: 600px){
+    header{
+        flex-direction: column;
+        gap: 2px;
+        padding: 2px;
+    }
+    .logo img{
+        display: block;
+        margin: 0 auto;
+        max-width: 90%;
+        height: 40px;
+    }
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .nav--item a{
+        font-size: 14px;
+    }
+    .serviciosb{
+        background: #000000;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+    .serviciosb img{
+        min-width: 70%;
+        height: 200px;
+
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    
+   
+}
+
+.servicios{
+    position: absolute;
+    top: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+    width: 100%;
+    z-index: 999;
+
+}
+
+.servicios a{
+
+    text-decoration: none;
+    color: #000000;
+    background: rgba(255, 255, 255, 0.582);
+    backdrop-filter: blur(5px);
+
+    padding: 12px 20px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.servicios a:hover{
+    background: #ffc60ad7;
+}
+
+.banner img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+section{
+    width: 100%;
+    height: 100vh;
+}
+section img{
+    width: 300%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.servicios a:hover{
+    background-color: #ffc400e8
+}
+
+
+.serviciosa{
+    background: #000000;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 15px;
+    padding: 15px;
+}
+.serviciosa img{
+    width: 100%;
+    height: 250px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.serviciosb{
+    background: #000000;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 15px;
+    padding: 15px;
+}
+.serviciosb img{
+    max-width: 50%;
+    height: 350px;
+
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/*sección de la historia*/
+
+.quienes{
+    display: grid;
+    grid-template-columns: 42% 1fr;
+
+    gap: 50px;
+    padding: 60px 50px;
+    width: 100%;
+    min-height: 0;
+    margin: 0 auto;  
+    box-sizing: border-box;  
+    height: auto;
+    align-items: start;
+}
+
+.texto{
+    width: 100%;
+    max-width: 68ch;
+    color: #1a1a1a;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: rgba(255, 255, 255, 0.55);
+    padding: 35px 40px;
+    border-radius: 15px;
+}
+
+.texto h4{
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    color: #6b4b00;
+    border-bottom: 3px solid rgb(208,187,52);
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.texto h4:first-child{
+    margin-top: 0;
+}
+
+.texto h5{
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    color: #6b4b00;
+}
+
+.texto p{
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.texto ul{
+    margin: 0 0 20px 0;
+    padding-left: 22px;
+    line-height: 1.7;
+}
+
+.texto ul li{
+    margin-bottom: 6px;
+}
+
+.lista-servicios li::marker,
+.lista-categorias li::marker{
+    color: rgb(208,187,52);
+    font-weight: bold;
+}
+
+.linea-tiempo{
+    list-style: none;
+    padding-left: 0;
+    border-left: 3px solid rgb(208,187,52);
+}
+
+.linea-tiempo li{
+    padding: 4px 0 4px 18px;
+    margin-bottom: 10px;
+}
+
+.linea-tiempo strong{
+    color: #6b4b00;
+}
+
+.img-quienes{
+    width: 100%;
+
+}
+
+.img-quienes img{
+    margin-bottom: 90%;
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.img-quienesa {
+    width: 100%;
+
+}
+
+.img-quienesa img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+@media (max-width: 900px) {
+    .quienes {
+        grid-template-columns: 1fr;
+    }
+    .galeria-automovilismo {
+        position: static;
+        top: auto;
+    }
+    .texto {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .quienes {
+        padding: 30px 20px;
+        gap: 25px;
+    }
+    .img-quienes {
+        order: 2;
+    }
+    .texto {
+        order: 2;
+        padding: 25px 22px;
+    }
+    .img-quienes img {
+        max-height: 350px;
+    }
+
+    .img-quienesa {
+        order: 2;
+    }
+    .img-quienesa img {
+        max-height: 350px;
+    }
+    .galeria-automovilismo {
+        order: 1;
+    }
+    .texto h4{
+        font-size: 1.35rem;
+    }
+    .texto p, .texto ul{
+        font-size: 0.98rem;
+    }
+}
+
+/*footer*/
+
+footer {
+    position: relative;
+    clear: both;
+    flex-grow: 1;
+    min-height: fit-content;
+    background: linear-gradient(to right, rgb(133,115,0), rgb(65, 0, 0), rgb(0, 0, 0));
+    text-align: left;
+    padding: 0;
+    bottom: 0;
+    width: 100%;
+    background-image: url(a/fooder.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.donde{
+    margin-top: 50px;
+    text-shadow: 5px 5px 10px #574300;
+    color: #ffff;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.dondeb{
+    color: #000000;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    background: rgb(208, 187, 52);
+}
+.dondea{
+    text-align: center;
+    color: rgb(208,187,52);
+    font-size: 4rem;
+    font-weight: bold;
+    background: rgb(208,187,52);
+}
+.slogan{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    color: rgb(208,187,52);
+    background-color: rgb(0,0,0);
+}
+
+.ubi{
+    margin-top: 49px;
+    margin-bottom: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    width: 100%;
+}
+.mapslogo{
+    width: 30px;
+    height: 30px;
+}
+
+.mapa{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.mapa iframe{
+    margin-top: 10px;
+    width: 80%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 15px;
+}
+.btnwsp{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.wsp{
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+/*hero de video en Quienes somos*/
+
+.hero-banner {
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-banner video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.55));
+    padding: 20px;
+}
+
+.hero-brand {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: rgb(208,187,52);
+    text-shadow: 4px 4px 12px rgba(0,0,0,0.8);
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.hero-title {
+    margin-top: 15px;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+}
+
+@media (max-width: 768px) {
+    .hero-brand {
+        font-size: 3rem;
+    }
+    .hero-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-banner {
+        height: 70vh;
+    }
+    .hero-brand {
+        font-size: 2.3rem;
+    }
+    .hero-title {
+        font-size: 1.4rem;
+    }
+}
+
+/*carrusel de automovilismo*/
+
+.galeria-automovilismo {
+    width: 100%;
+    position: sticky;
+    top: 95px;
+    align-self: start;
+}
+
+.carousel {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: rgb(208,187,52);
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 8%;
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 320px;
+    }
+}
+/* =========================================
+   CORRECCIONES GENERALES
+========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Evita que las imágenes generen scroll horizontal */
+img,
+video {
+    max-width: 100%;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    min-height: 80px;
+}
+
+
+/* =========================================
+   BANNER PRINCIPAL - INDEX
+========================================= */
+
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Video del index */
+.hero-banner video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   BOTONES DE SERVICIOS
+========================================= */
+
+.servicios {
+    position: absolute;
+    top: 40%;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 0 15px;
+
+    z-index: 999;
+}
+
+.servicios a {
+    text-align: center;
+}
+
+
+/* =========================================
+   PÁGINA ¿QUIÉNES SOMOS?
+========================================= */
+
+.quienes {
+    display: grid;
+    grid-template-columns: 42% 1fr;
+
+    gap: 50px;
+
+    padding: 60px 50px;
+
+    width: 100%;
+    height: auto;
+    min-height: 0;
+
+    align-items: start;
+}
+
+
+/* TEXTO */
+
+.texto {
+    width: 100%;
+    max-width: 100%;
+
+    color: #1a1a1a;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    padding: 35px 40px;
+
+    border-radius: 15px;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.texto p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+
+    margin-bottom: 16px;
+}
+
+
+/* =========================================
+   IMAGEN PRINCIPAL DE QUIÉNES SOMOS
+========================================= */
+
+.img-quienes {
+    width: 100%;
+}
+
+/* IMPORTANTE:
+   Se elimina el margin-bottom: 90%
+   y se evita el zoom/corte de la imagen
+*/
+
+.img-quienes img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-height: none;
+
+    object-fit: contain;
+
+    margin-bottom: 0;
+
+    border-radius: 15px;
+}
+
+
+/* Si usás la otra clase de imágenes */
+
+.img-quienesa {
+    width: 100%;
+}
+
+.img-quienesa img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 15px;
+}
+
+
+/* =========================================
+   CARRUSEL
+========================================= */
+
+.galeria-automovilismo {
+    width: 100%;
+
+    position: sticky;
+    top: 95px;
+
+    align-self: start;
+}
+
+.carousel {
+    width: 100%;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Se mantiene un tamaño uniforme sin cortar
+   partes importantes de las fotos */
+
+.carousel-item {
+    background: #000;
+}
+
+.carousel-item img {
+    display: block;
+
+    width: 100%;
+    height: 500px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .quienes {
+        grid-template-columns: 1fr;
+
+        padding: 40px 25px;
+
+        gap: 30px;
+    }
+
+    .galeria-automovilismo {
+        position: static;
+    }
+
+    .texto {
+        max-width: 100%;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* ---------- HEADER ---------- */
+
+    header {
+        height: auto;
+        min-height: 100px;
+
+        flex-direction: column;
+
+        gap: 2px;
+
+        padding: 3px 5px;
+    }
+
+    .logo img {
+        display: block;
+
+        width: auto;
+        max-width: 90%;
+
+        height: 40px;
+
+        margin: 0 auto;
+    }
+
+    nav {
+        height: auto;
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 6px 12px;
+
+        padding: 0 5px;
+
+        margin: 0;
+    }
+
+    .nav--item a {
+        font-size: 13px;
+    }
+
+
+    /* =====================================
+       HERO DEL INDEX
+       Ocupa exactamente el primer pantallazo
+    ===================================== */
+
+    .hero-banner {
+        height: 100svh;
+        min-height: 100svh;
+    }
+
+    .hero-banner video {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
+    /* =====================================
+       BOTONES SOBRE EL BANNER
+    ===================================== */
+
+    .servicios {
+        position: absolute;
+
+        top: auto;
+        bottom: 20px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 0 10px;
+
+        gap: 7px;
+
+        justify-content: center;
+    }
+
+    .servicios a {
+        padding: 8px 11px;
+
+        font-size: 12px;
+
+        border-radius: 20px;
+    }
+
+
+    /* =====================================
+       QUIÉNES SOMOS
+    ===================================== */
+
+    .quienes {
+        display: flex;
+
+        flex-direction: column;
+
+        padding: 25px 15px;
+
+        gap: 25px;
+    }
+
+
+    /* Primero carrusel */
+
+    .galeria-automovilismo {
+        order: 1;
+
+        width: 100%;
+
+        position: static;
+    }
+
+
+    /* Después texto */
+
+    .texto {
+        order: 2;
+
+        width: 100%;
+
+        padding: 22px 18px;
+
+        border-radius: 12px;
+    }
+
+    .texto h4 {
+        font-size: 1.3rem;
+
+        line-height: 1.3;
+    }
+
+    .texto h5 {
+        font-size: 1.1rem;
+
+        line-height: 1.3;
+    }
+
+    .texto p,
+    .texto ul {
+        font-size: 0.98rem;
+
+        line-height: 1.7;
+    }
+
+
+    /* =====================================
+       IMÁGENES QUIÉNES SOMOS
+       SIN ZOOM
+    ===================================== */
+
+    .img-quienes,
+    .img-quienesa {
+        width: 100%;
+
+        order: 1;
+    }
+
+    .img-quienes img,
+    .img-quienesa img {
+        width: 100%;
+
+        height: auto;
+
+        max-height: none;
+
+        object-fit: contain;
+
+        margin: 0;
+
+        border-radius: 12px;
+    }
+
+
+    /* =====================================
+       CARRUSEL RESPONSIVE
+    ===================================== */
+
+    .carousel {
+        border-radius: 12px;
+    }
+
+    .carousel-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: #000;
+    }
+
+    .carousel-item img {
+        width: 100%;
+
+        height: auto;
+
+        max-height: 70vh;
+
+        object-fit: contain;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 12%;
+    }
+
+
+    /* =====================================
+       SLOGAN
+    ===================================== */
+
+    .slogan {
+        font-size: 1rem;
+
+        line-height: 1.5;
+
+        padding: 15px 12px;
+    }
+
+
+    /* =====================================
+       FOOTER
+    ===================================== */
+
+    .donde {
+        margin-top: 25px;
+
+        font-size: 2rem;
+
+        padding: 0 15px;
+    }
+
+    .ubi {
+        margin-top: 25px;
+
+        padding: 0 15px;
+
+        font-size: 20px;
+
+        text-align: center;
+    }
+
+    .mapa {
+        margin: 20px 0;
+    }
+
+    .mapa iframe {
+        width: 90%;
+
+        height: 300px;
+    }
+
+
+    /* BOTÓN WHATSAPP */
+
+    .btnwsp {
+        width: 50px;
+        height: 50px;
+
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .wsp {
+        width: 50px;
+        height: 50px;
+
+        margin: 0;
+    }
+
 }
