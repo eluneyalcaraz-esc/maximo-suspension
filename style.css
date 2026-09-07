@@ -1,0 +1,475 @@
+/* =========================================
+   RESET & REGLAS GENERALES
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Chakra Petch', sans-serif;
+    background-color: #b17300;
+    overflow-x: hidden;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================================
+   HEADER & NAVEGACIÓN
+========================================= */
+/* =========================================
+   HEADER & NAVEGACIÓN (CORREGIDO Y CENTRADO)
+========================================= */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    background: rgba(226, 226, 226, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1000;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+/* El nav ocupa el resto del espacio y centra la lista */
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+.nav--item a:hover {
+    color: rgb(255, 221, 0);
+}
+
+/* =========================================
+   MEDIA QUERIES (TABLETS Y CELULARES)
+========================================= */
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+}
+/* =========================================
+   HERO BANNER (INDEX Y QUIÉNES SOMOS)
+========================================= */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    max-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.hero-banner video,
+.hero-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 20px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Botones flotantes de Servicios en Inicio */
+.servicios {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 15px;
+    z-index: 999;
+}
+
+.servicios a {
+    text-decoration: none;
+    color: #000000;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.servicios a:hover {
+    background: #ffc400;
+}
+
+/* =========================================
+   PÁGINA: ¿QUIÉNES SOMOS?
+========================================= */
+.slogan {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: rgb(208, 187, 52);
+    background-color: #000000;
+    padding: 20px 15px;
+    line-height: 1.5;
+}
+
+.quienes {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    gap: 40px;
+    padding: 50px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.galeria-automovilismo {
+    width: 100%;
+    position: sticky;
+    top: 90px;
+}
+
+.carousel {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    background: #000;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+}
+
+.texto {
+    width: 100%;
+    color: #1a1a1a;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 35px 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.texto h4 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    color: #6b4b00;
+    border-bottom: 3px solid rgb(208, 187, 52);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.texto h4:first-child {
+    margin-top: 0;
+}
+
+.texto h5 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #6b4b00;
+}
+
+.texto p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.texto ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+.lista-servicios li::marker,
+.lista-categorias li::marker {
+    color: rgb(208, 187, 52);
+}
+
+.linea-tiempo {
+    list-style: none;
+    padding-left: 0;
+    border-left: 3px solid rgb(208, 187, 52);
+}
+
+.linea-tiempo li {
+    padding: 4px 0 4px 15px;
+    margin-bottom: 8px;
+}
+
+/* =========================================
+   PÁGINA: NUESTRO TRABAJO
+========================================= */
+.dondea {
+    text-align: center;
+    color: #000000;
+    font-size: 3.5rem;
+    font-weight: bold;
+    background: rgb(208, 187, 52);
+    padding: 100px 10px 10px 10px;
+}
+
+.dondeb {
+    color: #000000;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    background: rgb(208, 187, 52);
+    padding: 12px;
+    margin-top: 20px;
+}
+
+.serviciosa, .serviciosb {
+    background: #000000;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.serviciosa img, .serviciosb img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    margin-top: auto;
+    background: linear-gradient(to right, rgb(133, 115, 0), rgb(65, 0, 0), #000000);
+    background-image: url(a/fooder.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+    color: #ffffff;
+}
+
+.donde {
+    text-shadow: 2px 2px 8px #000;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.ubi {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.ubi a {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mapslogo {
+    width: 28px;
+    height: 28px;
+}
+
+.mapa {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.mapa iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    border-radius: 12px;
+}
+
+.btnwsp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.wsp {
+    width: 55px;
+    height: 55px;
+    transition: transform 0.2s;
+}
+
+.wsp:hover {
+    transform: scale(1.1);
+}
+
+/* =========================================
+   MEDIA QUERIES (RESPONSIVE)
+========================================= */
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .quienes {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+
+    .galeria-automovilismo {
+        position: static;
+    }
+
+    .carousel-item img {
+        height: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-banner {
+        height: 50vh;
+        min-height: 320px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .servicios {
+        bottom: 15px;
+    }
+
+    .servicios a {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .slogan {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .texto {
+        padding: 20px;
+    }
+
+    .texto h4 {
+        font-size: 1.3rem;
+    }
+
+    .dondea {
+        font-size: 2.5rem;
+        padding-top: 110px;
+    }
+
+    .dondeb {
+        font-size: 1.6rem;
+    }
+
+    .donde {
+        font-size: 1.8rem;
+    }
+
+    .ubi {
+        font-size: 1.1rem;
+    }
+
+    .carousel-item img {
+        height: 250px;
+    }
+}
