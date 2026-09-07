@@ -284,6 +284,12 @@ section img{
     .img-quienesa img {
         max-height: 350px;
     }
+    .galeria-automovilismo {
+        order: 2;
+    }
+    .texto {
+        order: 1;
+    }
 }
 
 /*footer*/
@@ -330,7 +336,8 @@ footer {
     text-align: center;
     font-size: x-large;
     font-weight: bold;
-    background-color: rgb(208,187,52);
+    color: rgb(208,187,52);
+    background-color: rgb(0,0,0);
 }
 
 .ubi{
@@ -379,19 +386,103 @@ footer {
     height: 50px;
     margin-right: 20px;
 }
-.banner-quienes {
+/*hero de video en Quienes somos*/
+
+.hero-banner {
+    position: relative;
     width: 100%;
-    max-height: 350px;
+    height: 100vh;
     overflow: hidden;
 }
 
-.banner-quienes video {
+.hero-banner video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.55));
+    padding: 20px;
+}
 
+.hero-brand {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: rgb(208,187,52);
+    text-shadow: 4px 4px 12px rgba(0,0,0,0.8);
+    letter-spacing: 2px;
+    line-height: 1;
+}
 
+.hero-title {
+    margin-top: 15px;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+}
 
+@media (max-width: 768px) {
+    .hero-brand {
+        font-size: 3rem;
+    }
+    .hero-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-banner {
+        height: 70vh;
+    }
+    .hero-brand {
+        font-size: 2.3rem;
+    }
+    .hero-title {
+        font-size: 1.4rem;
+    }
+}
+
+/*carrusel de automovilismo*/
+
+.galeria-automovilismo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.carousel {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: rgb(208,187,52);
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 8%;
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 320px;
+    }
+}
