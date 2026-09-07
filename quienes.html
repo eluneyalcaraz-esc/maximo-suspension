@@ -24,17 +24,14 @@
             </ul>
         </nav>
     </header>
-      <div class="dondea">
-            Maximo
+      <div class="hero-banner" id="ali">
+        <video autoplay muted loop playsinline poster="a/banner-poster.jpg">
+            <source src="a/banner-taller.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay">
+            <div class="hero-title">¿Quiénes somos?</div>
+        </div>
     </div>
-    <div class="dondeb" id="ali">
-            ¿Quiénes somos?
-    </div>
-    <div class="banner-quienes">
-    <video autoplay muted loop playsinline>
-        <source src="a/.mp4" type="video/mp4">
-    </video>
-</div>
     <div class="slogan">En nuestro taller, la pasión por la mecánica no es solo una profesión, es una tradición familiar que se lleva en la sangre. Estamos ubicados en Quilmes Oeste, brindando soluciones mecánicas integrales con el mismo compromiso y dedicación desde 1986.</div>
     
     <section class="quienes">
@@ -61,7 +58,7 @@
         </p>
 
         <h4>Automovilismo<br></h4> 
-        <P>
+        <p>
         Desde la década de los '80, la mecánica de calle siempre fue de la mano con la alta
         competencia. "El Tano" volcó su conocimiento al desarrollo y atención de chasis para autos
         de carrera, dejando su huella tanto en categorías zonales como en la escena nacional.
@@ -88,13 +85,43 @@
         carreras sigue más vivo que nunca dentro del taller.
         </p>
     </div>
-    <div class="img-quienes">
-        <img src="a/alineacion3.jpg" alt="Imagen de la historia de Máximo Suspensión">
+
+    <div class="galeria-automovilismo">
+        <div id="carouselAutomovilismo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselAutomovilismo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselAutomovilismo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselAutomovilismo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselAutomovilismo" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselAutomovilismo" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="a/autom1.jpg" alt="Auto de carreras Máximo Suspensión en pista">
+                </div>
+                <div class="carousel-item">
+                    <img src="a/autom2.jpg" alt="Auto de carreras del equipo en competencia">
+                </div>
+                <div class="carousel-item">
+                    <img src="a/autom3.jpg" alt="Piloto en el habitáculo del auto de carreras">
+                </div>
+                <div class="carousel-item">
+                    <img src="a/autom4.jpg" alt="Máximo Jr. junto a Fabio Máximo con el auto de carreras">
+                </div>
+                <div class="carousel-item">
+                    <img src="a/autom5.jpg" alt="Festejo en el podio de carreras">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAutomovilismo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselAutomovilismo" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
     </div>
-    <div class="img-quienesa">
-        <img src="a/alineacion3.jpg" alt="Imagen de la historia de Máximo Suspensión">
-    </div>
-    
     </section>
 
     <footer id="contacto">
@@ -120,5 +147,7 @@
             
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
