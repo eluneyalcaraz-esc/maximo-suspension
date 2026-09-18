@@ -25,12 +25,7 @@ img, video {
     height: auto;
 }
 
-/* =========================================
-   HEADER & NAVEGACIÓN
-========================================= */
-/* =========================================
-   HEADER & NAVEGACIÓN (CORREGIDO Y CENTRADO)
-========================================= */
+
 header {
     position: fixed;
     top: 0;
@@ -284,7 +279,7 @@ nav a {
 .dondea {
     text-align: center;
     color: #000000;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: bold;
     background: rgb(208, 187, 52);
     padding: 100px 10px 10px 10px;
