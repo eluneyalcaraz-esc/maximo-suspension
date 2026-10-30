@@ -3,177 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maximo Suspensión</title>
+    <meta name="theme-color" content="#161616">
+    <meta name="description" content="Alineación, suspensión, frenos y mecánica en Quilmes Oeste. Experiencia familiar y atención personalizada desde 1986.">
+    <title>Máximo Suspensión | Taller mecánico en Quilmes</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="MS.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="a/Iniciologo.png" alt="Maximo suspension logo">
-            </a>
-        </div>
-        <nav class="barra">
+        <a class="logo" href="index.html" aria-label="Máximo Suspensión, inicio">
+            <img src="a/Iniciologo-recortado.png" alt="Máximo Suspensión">
+        </a>
+        <nav class="barra" aria-label="Navegación principal">
             <ul>
-                <li class="nav--item"><a href="index.html">Inicio</a></li>
-                <li class="nav--item"><a href="#contacto">Ubicación</a></li>
-                <li class="nav--item"><a href="quienes.html">¿Quiénes somos?</a></li>
+                <li><a href="index.html" aria-current="page">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="quienes.html">Quiénes somos</a></li>
+                <li><a href="#contacto">Ubicación</a></li>
             </ul>
         </nav>
-        
+        <a class="header-contact" href="https://wa.me/5491125281568?text=Hola,%20quisiera%20hacer%20una%20consulta." target="_blank" rel="noopener noreferrer">Contactanos</a>
     </header>
-   <div class="hero-banner">
 
-    <video autoplay muted loop playsinline poster="a/banner-poster.jpg">
-        <source src="a/banner-taller.mp4" type="video/mp4">
-    </video>
-
-    <div class="servicios">
-        <a href="#ali">Alineación</a>
-        <a href="#dire">Dirección</a>
-        <a href="#fre">Frenos</a>
-        <a href="#bal">Balanceo</a>
-        <a href="#tren">Tren delantero</a>
-        <a href="#sus">Suspensión</a>
-        <a href="#meca">Mecánica ligera</a>
-        <a href="#especiales">Trabajos especiales</a>
-        <a href="#mante">Mantenimiento</a>
-    </div></div>
-    <div class="dondea">
-            Todo lo que hacemos!
-            <div class="slogan">¡Contamos con una máquina de alineación láser completamente hecha por nosotros!</div>
-            <div class="serviciosa">
-                <img src="a/alineación1.jpg" class="al">
-                <img src="a/alineación2.jpg" class="alineacion2">
-                <img src="a/alineacion3.jpg" class="alineacion3">
-                <img src="a/alineacion4.jpg" class="alineacion4">
-                <img src="a/alineacion5.jpg" class="alineacion4">
-                <img src="a/alineacion6.jpg" class="alineacion4">
-                <img src="a/alineacion7.jpg" class="alineacion4">
+    <main id="contenido">
+        <section class="hero-banner" aria-labelledby="hero-title">
+            <video autoplay muted loop playsinline poster="a/autobanner.jpg" aria-hidden="true">
+                <source src="a/banner-taller.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay">
+                <p class="eyebrow">Taller mecánico en Quilmes Oeste · Desde 1986</p>
+                <h1 class="hero-title" id="hero-title">Cuidamos tu auto.<br><span>Conocemos cada detalle.</span></h1>
+                <p class="hero-description">Alineación, suspensión y mecánica con experiencia de taller y pasión por los fierros.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="https://wa.me/5491125281568?text=Hola,%20quisiera%20hacer%20una%20consulta." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
+                    <a class="button button-secondary" href="#servicios">Conocé nuestros servicios</a>
+                </div>
             </div>
-    </div>
+        </section>
 
-    <div class="dondeb" id="ali">
-            Alineación
-    </div>
-    <div class="slogan">¡Contamos con una máquina de alineación láser completamente hecha por nosotros!</div>
-    <div class="serviciosa">
-        <img src="a/alineación1.jpg" class="al">
-        <img src="a/alineación2.jpg" class="alineacion2">
-        <img src="a/alineacion3.jpg" class="alineacion3">
-        <img src="a/alineacion4.jpg" class="alineacion4">
-        <img src="a/alineacion5.jpg" class="alineacion4">
-        <img src="a/alineacion6.jpg" class="alineacion4">
-        <img src="a/alineacion7.jpg" class="alineacion4">
-    </div>
-    
-    <div class="dondeb" id="dire">
-            Dirección
-    </div>
-    <div class="serviciosb">
-        <img src="a/direccion1.jpg">
-    </div>
+        <section class="service-index" aria-label="Acceso rápido a los servicios">
+            <p>Encontrá el servicio que necesitás</p>
+            <nav class="servicios" aria-label="Servicios">
+                <a href="#ali">Alineación</a>
+                <a href="#dire">Dirección</a>
+                <a href="#fre">Frenos</a>
+                <a href="#bal">Balanceo</a>
+                <a href="#tren">Tren delantero</a>
+                <a href="#sus">Suspensión</a>
+                <a href="#meca">Mecánica ligera</a>
+                <a href="#especiales">Trabajos especiales</a>
+                <a href="#mante">Mantenimiento</a>
+            </nav>
+        </section>
 
-
-    <div class="dondeb" id="fre">
-            Frenos
-    </div>
-    <div class="serviciosa">
-        <img src="a/frenos1.jpg" class="alineación1">
-        <img src="a/frenos2.jpg" class="alineacion2">
-        <img src="a/frenos3.jpg" class="alineacion2">
-        <img src="a/frenos4.jpg" class="alineacion2">
-    </div>
-
-
-    <div class="dondeb" id="bal">
-            Balanceo
-    </div>
-    <div class="serviciosb">
-        <img src="a/balanceo1.jpg" class="alineación1">
-    </div>
-
-
-    <div class="dondeb" id="tren">
-           Tren delantero
-    </div>
-    <div class="serviciosb">
-        <img src="a/trend1.jpg" class="alineación1">
-    </div>
-
-    
-    <div class="dondeb" id="sus">
-            Suspensión
-    </div>
-    <div class="serviciosa">
-        <img src="a/alineación1.jpg" class="alineación1">
-        <img src="a/alineacion4.jpg" class="alineacion2">
-
-    </div>
-
-
-    <div class="dondeb" id="meca">
-            Mecanica ligera
-    </div>
-    <div class="serviciosa">
-        <img src="a/mecligera1.jpg" class="alineación1">
-        <img src="a/mecligera2.jpg" class="alineacion2">
-        <img src="a/mecligera3.jpg" class="alineacion2">
-        <img src="a/mecligera4.jpg" class="alineacion2">
-        <img src="a/mecligera5.jpg" class="alineacion2">
-        <img src="a/mecligera6.jpg" class="alineacion2">
-        <img src="a/mecligera7.jpg" class="alineacion2">
-    </div>
-    
-
-    <div class="dondeb" id="especiales">
-            Trabajos especiales 
-    </div>
-    <div class="serviciosa">
-        <img src="a/trabesp1.jpg" class="alineación1">
-        <img src="a/trabesp2.jpg" class="alineacion2">
-        <img src="a/trabesp3.jpg" class="alineacion2">
-        <img src="a/trabesp4.jpg" class="alineacion2">
-        <img src="a/trabesp5.jpg" class="alineacion2">
-        <img src="a/trabesp6.jpg" class="alineacion2">
-        <img src="a/trabesp7.jpg" class="alineacion2">
-    </div>
-
-
-    <div class="dondeb" id="mante">
-            Mantenimiento 
-    </div>
-    <div class="serviciosa">
-        <img src="a/tuercabanner.jpg" class="alineación1">
-        <img src="a/mant1.jpg" class="alineación1">
-        <img src="a/mant2.jpg" class="alineacion2">
-        <img src="a/mant3.jpg" class="alineacion2">
-        <img src="a/mant4.jpg" class="alineacion2">
-    </div>
-    <footer id="contacto">
-        <div class="footer-content">
-            <div class="donde">
-            ¿Dónde nos encontras?
+        <section class="services" id="servicios" aria-labelledby="services-title">
+            <div class="section-heading">
+                <p class="eyebrow">Experiencia para cada camino</p>
+                <h2 id="services-title">Soluciones para tu vehículo</h2>
+                <p>Un equipo cercano, trabajo dedicado y una trayectoria construida en el taller.</p>
             </div>
-            <div class="ubi">
-            <a href="https://www.google.com/maps/place/Gral.+Acha+1568,+B1878+Quilmes+Oeste,+Provincia+de+Buenos+Aires/@-34.740072,-58.2885388,17z/data=!3m1!4b1!4m6!3m5!1s0x95a32dd74b11ed37:0xceb569918934865b!8m2!3d-34.7400764!4d-58.2859639!16s%2Fg%2F11pdfvt6d4?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D">
-                <img class="mapslogo" src="a/Maps1.PNG"> Gral. Acha 1568</a>
-            </div>
-            <section class="mapa">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d204.91329104104489!2d-58.28592084584292!3d-34.740156724886994!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32de238d75183%3A0xd6b269931dcf748!2sMaximo%20Suspensi%C3%B3n!5e0!3m2!1sen!2sar!4v1781891461631!5m2!1sen!2sar"
-                width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapa"></iframe>
+
+            <section class="service-card" id="ali">
+                <div class="service-copy">
+                    <span class="service-number">01</span>
+                    <h3>Alineación</h3>
+                    <p>Trabajamos con una máquina de alineación láser diseñada y construida por nosotros para lograr una puesta a punto precisa.</p>
+                </div>
+                <div class="gallery-carousel">
+                    <button class="gallery-arrow" type="button" data-gallery-direction="-1" aria-label="Ver fotos anteriores de alineación"><span aria-hidden="true">‹</span></button>
+                    <div class="service-gallery" tabindex="0" aria-label="Galería de fotos de alineación">
+                        <img src="a/alineación1.jpg" alt="Equipo de alineación del taller" loading="lazy">
+                        <img src="a/alineación2.jpg" alt="Trabajo de alineación de un vehículo" loading="lazy">
+                        <img src="a/alineacion3.jpg" alt="Detalle del proceso de alineación" loading="lazy">
+                        <img src="a/alineacion4.jpg" alt="Vehículo en el área de alineación" loading="lazy">
+                        <img src="a/alineacion5.jpg" alt="Máquina de alineación láser" loading="lazy">
+                        <img src="a/alineacion6.jpg" alt="Revisión de ruedas y suspensión" loading="lazy">
+                        <img src="a/alineacion7.jpg" alt="Trabajo de precisión en el taller" loading="lazy">
+                    </div>
+                    <button class="gallery-arrow" type="button" data-gallery-direction="1" aria-label="Ver más fotos de alineación"><span aria-hidden="true">›</span></button>
+                </div>
             </section>
 
-            <a
-            href="https://wa.me/5491125281568?text=Hola,%20quisiera%20hacer%20una%20consulta."
-            class="btnwsp"
-            target="_blank">
-            <i class="biwsp"></i> 
-        <img src="a/wsp.png" class="wsp"></a>
-            
+            <section class="service-card" id="dire">
+                <div class="service-copy">
+                    <span class="service-number">02</span>
+                    <h3>Dirección</h3>
+                    <p>Revisamos el sistema de dirección para ayudarte a recuperar el control y la respuesta que esperás al manejar.</p>
+                </div>
+                <div class="service-gallery">
+                    <img src="a/direccion1.jpg" alt="Reparación del sistema de dirección" loading="lazy">
+                </div>
+            </section>
+
+            <section class="service-card" id="fre">
+                <div class="service-copy">
+                    <span class="service-number">03</span>
+                    <h3>Frenos</h3>
+                    <p>Inspección y reparación de componentes de freno, con atención en la seguridad y el funcionamiento de tu vehículo.</p>
+                </div>
+                <div class="gallery-carousel">
+                    <button class="gallery-arrow" type="button" data-gallery-direction="-1" aria-label="Ver fotos anteriores de frenos"><span aria-hidden="true">‹</span></button>
+                    <div class="service-gallery" tabindex="0" aria-label="Galería de fotos de frenos">
+                        <img src="a/frenos1.jpg" alt="Servicio de frenos en el taller" loading="lazy">
+                        <img src="a/frenos2.jpg" alt="Revisión de componentes de freno" loading="lazy">
+                        <img src="a/frenos3.jpg" alt="Trabajo de reparación de frenos" loading="lazy">
+                        <img src="a/frenos4.jpg" alt="Detalle de un trabajo en frenos" loading="lazy">
+                    </div>
+                    <button class="gallery-arrow" type="button" data-gallery-direction="1" aria-label="Ver más fotos de frenos"><span aria-hidden="true">›</span></button>
+                </div>
+            </section>
+
+            <section class="service-card" id="bal">
+                <div class="service-copy">
+                    <span class="service-number">04</span>
+                    <h3>Balanceo</h3>
+                    <p>Balanceo de ruedas para favorecer una marcha pareja y reducir vibraciones durante el manejo.</p>
+                </div>
+                <div class="service-gallery">
+                    <img src="a/balanceo1.jpg" alt="Servicio de balanceo de ruedas" loading="lazy">
+                </div>
+            </section>
+
+            <section class="service-card" id="tren">
+                <div class="service-copy">
+                    <span class="service-number">05</span>
+                    <h3>Tren delantero</h3>
+                    <p>Revisión y reparación del tren delantero para mantener el desempeño y la estabilidad del vehículo.</p>
+                </div>
+                <div class="service-gallery">
+                    <img src="a/trend1.jpg" alt="Trabajo en el tren delantero de un vehículo" loading="lazy">
+                </div>
+            </section>
+
+            <section class="service-card" id="sus">
+                <div class="service-copy">
+                    <span class="service-number">06</span>
+                    <h3>Suspensión</h3>
+                    <p>Diagnóstico y puesta a punto de la suspensión, con el cuidado que requiere cada vehículo.</p>
+                </div>
+                <div class="gallery-carousel">
+                    <button class="gallery-arrow" type="button" data-gallery-direction="-1" aria-label="Ver fotos anteriores de suspensión"><span aria-hidden="true">‹</span></button>
+                    <div class="service-gallery" tabindex="0" aria-label="Galería de fotos de suspensión">
+                        <img src="a/alineación1.jpg" alt="Inspección de la suspensión" loading="lazy">
+                        <img src="a/alineacion4.jpg" alt="Trabajo de suspensión en el taller" loading="lazy">
+                    </div>
+                    <button class="gallery-arrow" type="button" data-gallery-direction="1" aria-label="Ver más fotos de suspensión"><span aria-hidden="true">›</span></button>
+                </div>
+            </section>
+
+            <section class="service-card" id="meca">
+                <div class="service-copy">
+                    <span class="service-number">07</span>
+                    <h3>Mecánica ligera</h3>
+                    <p>Mantenimiento y reparaciones mecánicas generales para acompañarte en el uso cotidiano de tu auto.</p>
+                </div>
+                <div class="gallery-carousel">
+                    <button class="gallery-arrow" type="button" data-gallery-direction="-1" aria-label="Ver fotos anteriores de mecánica ligera"><span aria-hidden="true">‹</span></button>
+                    <div class="service-gallery" tabindex="0" aria-label="Galería de fotos de mecánica ligera">
+                        <img src="a/mecligera1.jpg" alt="Trabajo de mecánica ligera" loading="lazy">
+                        <img src="a/mecligera2.jpg" alt="Revisión mecánica en el taller" loading="lazy">
+                        <img src="a/mecligera3.jpg" alt="Reparación mecánica de un vehículo" loading="lazy">
+                        <img src="a/mecligera4.jpg" alt="Detalle de mecánica en el taller" loading="lazy">
+                        <img src="a/mecligera5.jpg" alt="Herramientas y trabajo mecánico" loading="lazy">
+                        <img src="a/mecligera6.jpg" alt="Vehículo en reparación" loading="lazy">
+                        <img src="a/mecligera7.jpg" alt="Mecánica general" loading="lazy">
+                    </div>
+                    <button class="gallery-arrow" type="button" data-gallery-direction="1" aria-label="Ver más fotos de mecánica ligera"><span aria-hidden="true">›</span></button>
+                </div>
+            </section>
+
+            <section class="service-card" id="especiales">
+                <div class="service-copy">
+                    <span class="service-number">08</span>
+                    <h3>Trabajos especiales</h3>
+                    <p>Desarrollos y soluciones a medida, respaldados por nuestra experiencia en mecánica y automovilismo.</p>
+                </div>
+                <div class="gallery-carousel">
+                    <button class="gallery-arrow" type="button" data-gallery-direction="-1" aria-label="Ver fotos anteriores de trabajos especiales"><span aria-hidden="true">‹</span></button>
+                    <div class="service-gallery" tabindex="0" aria-label="Galería de fotos de trabajos especiales">
+                        <img src="a/trabesp1.jpg" alt="Trabajo especial realizado en el taller" loading="lazy">
+                        <img src="a/trabesp2.jpg" alt="Desarrollo mecánico a medida" loading="lazy">
+                        <img src="a/trabesp3.jpg" alt="Detalle de un trabajo especial" loading="lazy">
+                        <img src="a/trabesp4.jpg" alt="Proyecto mecánico del taller" loading="lazy">
+                        <img src="a/trabesp5.jpg" alt="Trabajo personalizado en un vehículo" loading="lazy">
+                        <img src="a/trabesp6.jpg" alt="Reparación especial" loading="lazy">
+                        <img src="a/trabesp7.jpg" alt="Resultado de un trabajo a medida" loading="lazy">
+                    </div>
+                    <button class="gallery-arrow" type="button" data-gallery-direction="1" aria-label="Ver más fotos de trabajos especiales"><span aria-hidden="true">›</span></button>
+                </div>
+            </section>
+
+            <section class="service-card" id="mante">
+                <div class="service-copy">
+                    <span class="service-number">09</span>
+                    <h3>Mantenimiento</h3>
+                    <p>Servicios de mantenimiento para cuidar el estado general de tu vehículo y anticipar revisiones necesarias.</p>
+                </div>
+                <div class="gallery-carousel">
+                    <button class="gallery-arrow" type="button" data-gallery-direction="-1" aria-label="Ver fotos anteriores de mantenimiento"><span aria-hidden="true">‹</span></button>
+                    <div class="service-gallery" tabindex="0" aria-label="Galería de fotos de mantenimiento">
+                        <img src="a/tuercabanner.jpg" alt="Mantenimiento del vehículo" loading="lazy">
+                        <img src="a/mant1.jpg" alt="Trabajo de mantenimiento en el taller" loading="lazy">
+                        <img src="a/mant2.jpg" alt="Revisión de componentes del vehículo" loading="lazy">
+                        <img src="a/mant3.jpg" alt="Detalle de mantenimiento mecánico" loading="lazy">
+                        <img src="a/mant4.jpg" alt="Servicio de mantenimiento automotor" loading="lazy">
+                    </div>
+                    <button class="gallery-arrow" type="button" data-gallery-direction="1" aria-label="Ver más fotos de mantenimiento"><span aria-hidden="true">›</span></button>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-heading">
+                <p class="eyebrow">Estamos para ayudarte</p>
+                <h2>Vení a conocernos</h2>
+                <p>Te esperamos en Quilmes Oeste.</p>
+            </div>
+            <a class="address-link" href="https://www.google.com/maps/place/Gral.+Acha+1568,+B1878+Quilmes+Oeste,+Provincia+de+Buenos+Aires/@-34.740072,-58.2885388,17z/data=!3m1!4b1!4m6!3m5!1s0x95a32dd74b11ed37:0xceb569918934865b!8m2!3d-34.7400764!4d-58.2859639!16s%2Fg%2F11pdfvt6d4?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+                <img class="mapslogo" src="a/Maps1.PNG" alt="">
+                <span>Gral. Acha 1568, Quilmes Oeste</span>
+            </a>
+            <div class="mapa">
+                <iframe title="Ubicación de Máximo Suspensión en Quilmes Oeste" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d204.91329104104489!2d-58.28592084584292!3d-34.740156724886994!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32de238d75183%3A0xd6b269931dcf748!2sMaximo%20Suspensi%C3%B3n!5e0!3m2!1sen!2sar!4v1781891461631!5m2!1sen!2sar" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </div>
+            <a class="button button-primary footer-cta" href="https://wa.me/5491125281568?text=Hola,%20quisiera%20hacer%20una%20consulta." target="_blank" rel="noopener noreferrer">Escribinos por WhatsApp</a>
         </div>
+        <a class="btnwsp" href="https://wa.me/5491125281568?text=Hola,%20quisiera%20hacer%20una%20consulta." target="_blank" rel="noopener noreferrer" aria-label="Contactar a Máximo Suspensión por WhatsApp">
+            <img src="a/wsp.png" alt="">
+        </a>
     </footer>
+    <script src="gallery.js" defer></script>
 </body>
 </html>
